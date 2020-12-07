@@ -1,0 +1,17 @@
+.editUserInfo {
+  margin-top: 40rpx;
+}
+
+.editUserInfo-list-item {
+  height: 50rpx;
+  border-bottom: 1px #b4b5b6 dashed;
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editUserInfo-list-text {
+  font-size: 18rpx;
+  color: red;
+}

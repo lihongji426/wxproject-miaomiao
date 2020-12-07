@@ -1,0 +1,34 @@
+<view class="user">
+
+  <view class="user-info">
+    <image src="{{userPhoto}}" />
+    <text wx:if="{{logged}}">欢迎您：{{nickName}}</text>
+    <button wx:else open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" disabled="{{disabled}}">微信登录</button>
+  </view>
+
+  <view wx:if="{{logged}}" class="user-list">
+    
+    <navigator url="../editUserInfo/editUserInfo" open-type="navigate">
+      <view class="user-list-item">
+        <text>编辑个人信息</text>
+        <text class="iconfont iconiconfontjiantou5"></text>
+      </view>
+    </navigator>
+
+    <navigator url="../friendList/friendList" open-type="navigate">
+      <view class="user-list-item">
+        <text>查看好友列表</text>
+        <text class="iconfont iconiconfontjiantou5"></text>
+      </view>
+    </navigator>
+
+    <navigator url="{{'../detail/detail?userId=' + id}}" open-type="navigate">
+      <view class="user-list-item">
+        <text>个人主页</text>
+        <text class="iconfont iconiconfontjiantou5"></text>
+      </view>
+    </navigator>
+
+  </view>
+
+</view>
